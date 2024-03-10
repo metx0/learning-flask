@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block body %}
+    <a href="/">Return to the form</a>
+    <!-- Show all the registrants in the form of a unordered list -->
+    <!-- Some badass Jinja syntax, to do a for loop over the registrants dictionary -->
+    <ul>
+        {% for name in registrants %}
+            <li>{{ name }}: {{ registrants[name] }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

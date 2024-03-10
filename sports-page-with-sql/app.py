@@ -2,8 +2,6 @@ from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
-# We will save the registrant's information in a dictionary
-REGISTRANTS= {}
 # Supported sports
 SPORTS = ["Basketball", "Soccer", "Baseball"]
 
@@ -21,7 +19,7 @@ def register():
     if sport not in SPORTS or not name:
         return render_template("failure.html")
 
-    REGISTRANTS[name] = sport
+    # REGISTRANTS[name] = sport
 
     return render_template("success.html", user_name=name)  
 
