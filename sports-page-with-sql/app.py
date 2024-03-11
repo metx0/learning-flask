@@ -26,7 +26,7 @@ def register():
 # Here we will show all the registrants and their sports
 @app.route("/registrants")
 def show_registrants():
-    return render_template("registrants.html", registrants=REGISTRANTS)
+    return render_template("registrants.html")
 
 if __name__ == "__main__":
     app.run(debug=True)  
